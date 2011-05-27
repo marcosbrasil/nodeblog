@@ -5,14 +5,14 @@ var adminController = require('./controllers/admin');
 var blogController = require('./controllers/blog');
 var helpers = require('./helpers');
 
-function autenticar(ususario, senha) {
-  return 'egenial' === ususario && 'nodejs' === senha;
-}
+//function autenticar(ususario, senha) {
+  //return 'egenial' === ususario && 'nodejs' === senha;
+//}
 
 app.configure(function() {
   app.use(express.favicon());
   app.use(express.logger());
-  app.use(express.basicAuth(autenticar));
+  //app.use(express.basicAuth(autenticar));
   app.use(express.cookieParser());
   app.use(express.bodyParser());
   app.use(express.methodOverride());
