@@ -1,0 +1,27 @@
+<h1>Lista de Posts</h1>
+
+<table cellpadding="5" cellspacing="1" border="1">
+  <tr>
+    <th>Título</th>
+    <th>Corpo</th>
+    <th>Data de criação</th>
+    <th>Data de Alteração</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  <% posts.forEach(function(post) { %>
+  <tr>
+    <td><%= post.titulo %></td>
+    <td><%= post.corpo %></td>
+    <td><%= formataData(post.dataCriacao) %></td>
+    <td><%= formataData(post.dataAlteracao) %></td>
+    <td><a href="/admin/posts/<%= post.id %>">Exibir</a></td>
+    <td><a href="/admin/posts/<%= post.id %>/edit">Alterar</a></td>
+    <td><a href="/admin/posts/<%= post.id %>/destroy">Excluir</a></td>
+  </tr>
+  <% }) %>
+</table>
+
+
+<a href="/admin/posts/new">Novo post</a></li>

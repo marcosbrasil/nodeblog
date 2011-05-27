@@ -1,0 +1,16 @@
+<form action="<%= url_post(post) %>" method="post">
+  <%- hiddenAlteracao(post) %>
+  <p>
+    <label for="post[titulo]">Título:</label>
+    <input type="text" size="70" name="post[titulo]" value="<%= valorCampo(post, 'titulo') %>">
+  </p>
+  <p>
+    <label for="post[corpo]">Corpo:</label>
+    <textarea name="post[corpo]" cols="50" rows="10"><%= valorCampo(post, 'corpo') %></textarea>
+  </p>
+  <p>
+    <input type="submit" value="Salvar">
+    <%- linkExclusao(post) %>
+  </p>
+</form>
+
